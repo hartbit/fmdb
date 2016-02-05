@@ -46,6 +46,7 @@ Pod::Spec.new do |s|
     ss.dependency 'SQLCipher'
     ss.source_files = 'src/fmdb/FM*.{h,m}'
     ss.exclude_files = 'src/fmdb.m'
+	ss.library = []
     ss.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DSQLITE_HAS_CODEC -DHAVE_USLEEP=1' }
   end
   
